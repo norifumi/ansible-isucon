@@ -118,8 +118,9 @@
     - yum: name=zlib-devel
     - sudo_user: isucon
       #shell: .xbuild/ruby-install 2.0.0-p247 /home/isucon/local/ruby-2.0
-      shell: /home/isucon/.xbuild/ruby-install 2.0.0-p645 /home/isucon/local/ruby-2.0
-      shell: chown -R isucon:isucon /home/isucon/local/ruby-2.0
+      shell: |
+        /home/isucon/.xbuild/ruby-install 2.0.0-p645 /home/isucon/local/ruby-2.0
+        chown -R isucon:isucon /home/isucon/local/ruby-2.0
       args:
         creates: /home/isucon/local/ruby-2.0/bin/ruby
     - sudo_user: isucon
@@ -134,8 +135,9 @@
     # python
     - yum: name=patch
     - sudo_user: isucon
-      shell: /home/isucon/.xbuild/python-install 3.3.2 /home/isucon/local/python-3.3
-      shell: chown -R isucon:isucon /home/isucon/local/python-3.3
+      shell: |
+        /home/isucon/.xbuild/python-install 3.3.2 /home/isucon/local/python-3.3
+        chown -R isucon:isucon /home/isucon/local/python-3.3
       args:
         creates: /home/isucon/local/python-3.3/bin/python
     - sudo_user: isucon

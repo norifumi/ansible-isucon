@@ -86,7 +86,7 @@
 
     # nodejs
     - sudo_user: isucon
-      shell: /home/isucon/.xbuild/node-install -f v0.10.20 /home/isucon/local/node-v0.10
+      shell: /home/isucon/.xbuild/node-install -f v0.10.20 /home/isucon/local/node-v0.10 || true
       args:
         creates: /home/isucon/local/node-v0.10/bin/node
     - sudo_user: isucon

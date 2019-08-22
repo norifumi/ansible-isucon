@@ -67,7 +67,7 @@
 
     # go
     - sudo_user: isucon
-      shell: /home/isucon/.xbuild/go-install 1.8 /home/isucon/local/go
+      shell: /home/isucon/.xbuild/go-install 1.12 /home/isucon/local/go
       args:
         creates: /home/isucon/local/go/bin/go
     - sudo_user: isucon

@@ -153,7 +153,7 @@
         set -e
         source /home/isucon/env.sh
         cd /home/isucon/qualifier_bench
-        go get github.com/moovweb/gokogiri
+        go get github.com/norifumi/gokogiri
         go get github.com/wsxiaoys/terminal
         go build
 

@@ -94,6 +94,7 @@
         set -e
         source /home/isucon/env.sh
         cd /home/isucon/webapp/nodejs/
+        npm config set strict-ssl false
         npm install
       args:
         creates: /home/isucon/webapp/nodejs/node_modules

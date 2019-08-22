@@ -155,6 +155,7 @@
         cd /home/isucon/qualifier_bench
         go get github.com/norifumi/gokogiri
         go get github.com/wsxiaoys/terminal
+        grep -Rl 'moovweb' * | xargs sed -i -e 's/moovweb/norifumi/g'
         go build
 
     # supervisor package is too old

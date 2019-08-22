@@ -73,8 +73,8 @@
     - sudo_user: isucon
       shell: |
         set -e
-        source ./env.sh
-        cd webapp/go/
+        source /home/isucon/env.sh
+        cd /home/isucon/webapp/go/
         go get github.com/go-sql-driver/mysql
         go get github.com/gorilla/mux
         go get github.com/gorilla/sessions
@@ -91,8 +91,8 @@
     - sudo_user: isucon
       shell: |
         set -e
-        source ./env.sh
-        cd webapp/nodejs/
+        source /home/isucon/env.sh
+        cd /home/isucon/webapp/nodejs/
         npm install
       args:
         creates: /home/isucon/webapp/nodejs/node_modules
@@ -105,8 +105,8 @@
     - sudo_user: isucon
       shell: |
         set -e
-        source ./env.sh
-        cd webapp/perl/
+        source /home/isucon/env.sh
+        cd /home/isucon/webapp/perl/
         curl -L https://cpanmin.us | perl - Carton
         carton install
 
@@ -122,8 +122,8 @@
     - sudo_user: isucon
       shell: |
         set -e
-        source ./env.sh
-        cd webapp/ruby/
+        source /home/isucon/env.sh
+        cd /home/isucon/webapp/ruby/
         gem install bundler foreman
         bundle install --deployment --without development
 
@@ -136,8 +136,8 @@
     - sudo_user: isucon
       shell: |
         set -e
-        source ./env.sh
-        cd webapp/python/
+        source /home/isucon/env.sh
+        cd /home/isucon/webapp/python/
         easy_install flask gunicorn python3-memcached PyMySQL3
 
     # bench
@@ -146,8 +146,8 @@
     - sudo_user: isucon
       shell: |
         set -e
-        source ./env.sh
-        cd qualifier_bench
+        source /home/isucon/env.sh
+        cd /home/isucon/qualifier_bench
         go get github.com/moovweb/gokogiri
         go get github.com/wsxiaoys/terminal
         go build

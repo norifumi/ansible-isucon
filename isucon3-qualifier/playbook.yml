@@ -103,7 +103,7 @@
     - sudo_user: isucon
       shell: /home/isucon/.xbuild/perl-install 5.18.1 /home/isucon/local/perl-5.18
       args:
-        createss: /home/isucon/local/perl-5.18/bin/perl
+        creates: /home/isucon/local/perl-5.18/bin/perl
     - sudo_user: isucon
       shell: |
         set -e

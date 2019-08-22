@@ -103,7 +103,7 @@
     - sudo_user: isucon
       shell: /home/isucon/.xbuild/perl-install 5.18.1 /home/isucon/local/perl-5.18
       args:
-        creates: /home/isucon/local/perl-5.18/bin/perl
+        createss: /home/isucon/local/perl-5.18/bin/perl
     - sudo_user: isucon
       shell: |
         set -e
@@ -161,7 +161,8 @@
     # supervisor package is too old
     # - yum: name=supervisor
     - yum: name=python-setuptools
-    - easy_install: name=supervisor
+    #- easy_install: name=supervisor
+    - shell: /home/isucon/local/python-3.3/bin/easy_install supervisor
     - copy: src=files/etc/init.d/supervisord dest=/etc/init.d/ mode=a+x
     - copy: src=files/etc/sysconfig/supervisord dest=/etc/sysconfig/
     - copy: src=files/etc/supervisord.conf dest=/etc/

@@ -67,7 +67,7 @@
 
     # go
     - sudo_user: isucon
-      shell: .xbuild/go-install 1.8 /home/isucon/local/go
+      shell: /home/isucon/.xbuild/go-install 1.8 /home/isucon/local/go
       args:
         creates: /home/isucon/local/go/bin/go
     - sudo_user: isucon
@@ -85,7 +85,7 @@
 
     # nodejs
     - sudo_user: isucon
-      shell: .xbuild/node-install v0.10.20 /home/isucon/local/node-v0.10
+      shell: /home/isucon/.xbuild/node-install v0.10.20 /home/isucon/local/node-v0.10
       args:
         creates: /home/isucon/local/node-v0.10/bin/node
     - sudo_user: isucon
@@ -99,7 +99,7 @@
 
     # perl
     - sudo_user: isucon
-      shell: .xbuild/perl-install 5.18.1 /home/isucon/local/perl-5.18
+      shell: /home/isucon/.xbuild/perl-install 5.18.1 /home/isucon/local/perl-5.18
       args:
         creates: /home/isucon/local/perl-5.18/bin/perl
     - sudo_user: isucon
@@ -116,7 +116,7 @@
     - yum: name=zlib-devel
     - sudo_user: isucon
       #shell: .xbuild/ruby-install 2.0.0-p247 /home/isucon/local/ruby-2.0
-      shell: .xbuild/ruby-install 2.0.0-p645 /home/isucon/local/ruby-2.0
+      shell: /home/isucon/.xbuild/ruby-install 2.0.0-p645 /home/isucon/local/ruby-2.0
       args:
         creates: /home/isucon/local/ruby-2.0/bin/ruby
     - sudo_user: isucon
@@ -130,7 +130,7 @@
     # python
     - yum: name=patch
     - sudo_user: isucon
-      shell: .xbuild/python-install 3.3.2 /home/isucon/local/python-3.3
+      shell: /home/isucon/.xbuild/python-install 3.3.2 /home/isucon/local/python-3.3
       args:
         creates: /home/isucon/local/python-3.3/bin/python
     - sudo_user: isucon
